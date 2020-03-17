@@ -1,0 +1,327 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 85px;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+/* ------------- BODY ------------- */
+
+body {
+  font-family: $defaultFont;
+  font-size: 16px;
+  font-weight: $normalWeight;
+}
+
+/* ------------- HEADER ------------- */
+header {
+  h3 {
+    display: none;
+  }
+  background-color: rgb(107, 108, 110);
+}
+
+/*  ------------- CRUISE PAGE -------------  */
+
+.cruiseContainers {
+  .cruisePhoto {
+    width: 100%;
+  }
+  button,
+  h2,
+  p,
+  img {
+    margin-bottom: 10px;
+  }
+  img {
+    margin-top: 20px;
+  }
+  button {
+    width: 100%;
+    border-radius: 22px;
+    height: 44px;
+    background-color: $primaryColor;
+    color: white;
+    font-size: 1.25rem;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  p {
+    font-size: large;
+  }
+}
+
+/*  ------------- AGENTS -------------  */
+
+.agentDetails {
+  img {
+    padding: 20px 0;
+  }
+
+  h3,
+  p {
+    font-size: 1.25rem;
+    padding: 0 4px;
+  }
+
+  h3 {
+    padding-bottom: 5px;
+  }
+
+  p {
+    padding-bottom: 30px;
+  }
+}
+
+.comments {
+  h3,
+  p {
+    font-size: 1.25rem;
+    padding: 0 4px;
+  }
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  section {
+    padding-bottom: 20px;
+  }
+}
+
+.form {
+  padding-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  label {
+    padding-left: 5px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    input[type="text"],
+      [type="number"],
+      [type="tel"],
+      [type="email"],
+    select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 22px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: $primaryColor;
+    }
+  }
+}
+
+/*  ------------- MAIN -------------  */
+
+main {
+  h1 {
+    font-size: 1.75rem;
+    margin: 1rem 0 0 $gutter;
+    color: $primaryColor;
+  }
+}
+
+a.coolTrick {
+  display: block;
+  text-align: center;
+  width: auto;
+  margin: 2rem 0;
+  position: relative;
+  //   padding-bottom: 20px;
+
+  &:hover .coverColor {
+    opacity: 0.1;
+  }
+}
+
+.txt {
+  position: absolute;
+  top: 0px;
+  background-color: $secondaryColor;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  opacity: 0.8;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  top: 0;
+}
+
+.txtLow {
+  position: absolute;
+  bottom: 0;
+  background-color: $secondaryColor;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.coverColor {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+  background-color: $secondaryColor;
+  opacity: 0.75;
+}
+
+//   --------------------GALLERY CSS GRID-------------------
+
+.gallery {
+  display: grid;
+  img {
+    width: 100%;
+  }
+  grid-column-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four";
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+
+/*  ------------- SLICK SLIDER -------------  */
+.myslider div {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+/*  ------------- FOOTER -------------  */
+footer {
+  background-color: $primaryColor;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  div {
+    padding: 20px 10px 0 10px;
+  }
+
+  section {
+    padding-bottom: 10px;
+  }
+  .contact a {
+    color: $fontColor;
+  }
+  .phone a {
+    //   text-decoration: none;
+    color: $fontColor;
+  }
+  .news {
+    padding: 0;
+    h3,
+    p {
+      padding: 10px;
+    }
+  }
+  h3 {
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+    color: $fontColor;
+  }
+  p {
+    color: $fontColor;
+  }
+  #search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10 5px;
+    input {
+      height: 44px;
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    button {
+      height: 44px;
+      border-radius: 20px;
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: space-around;
+    padding: 10 20%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    .fab {
+      color: white;
+      font-size: 3.5rem;
+      padding: 0 5px;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+  .developer {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    a {
+      color: $fontColor;
+    }
+  }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,31 @@
+nav {
+	padding-left: 15%;
+	padding-right: 15%;
+	display: flex;
+	justify-content: center;
+}
+
+main {
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.homeCards {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.navbar-collapse {
+	display: flex;
+	justify-content: flex-end;	
+}
+

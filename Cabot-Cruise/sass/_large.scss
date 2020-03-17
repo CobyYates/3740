@@ -1,0 +1,73 @@
+/* ------------- MAIN ------------- */
+
+body {
+	margin: 0 auto;
+	clear: both;
+}
+
+.coolTrick{
+	.txt {
+	bottom: 85%;
+}
+}
+
+
+main {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"one two three four";
+	margin-bottom: 100px;
+  }
+
+  .icon {
+	height: 170px;
+	width: 170px;
+	position: absolute;
+	left: 45%;
+	top: 50%;
+	margin-top: -45%;
+}
+
+.txt {
+	position: absolute;
+	bottom: 50px;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 30% auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+	  "one two three"
+	  "four four four"
+    "five five five";
+
+    .contact {
+      grid-area: one;
+    }
+    .news {
+      grid-area: two;
+      padding-right: 10px;
+    }
+    .why {
+      grid-area: three;
+    }
+    .social {
+      grid-area: four;
+    }
+    .developer {
+      grid-area: five;
+    }
+}
+
